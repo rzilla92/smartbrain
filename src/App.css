@@ -2,3 +2,9 @@
     display: flex;
     justify-content: center;
 }
+
+.title  {
+    font-family: 'Noto Sans', serif;
+    letter-spacing: -1px;
+    font-size: 3em;
+}

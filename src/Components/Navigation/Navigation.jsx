@@ -5,7 +5,7 @@ const Navigation = () => {
   return (
     <nav className='flex justify-between items-center'>
       <Logo />
-      <h1 className='white'>SmartBrain</h1>
+      <h1 className='white title'>SmartBrain</h1>
       <p className='f3 ma4 link dim black underline pa3 pointer'>Sign Out</p>
     </nav>
   )
