@@ -1,0 +1,26 @@
+.appinfo {
+    color: white;
+  }
+
+.form {
+    width: 700px;
+    border-style: none;
+    background: linear-gradient(to right, #1CB5E0 0%, #3c49b8 100%);
+}
+
+.form-input {
+    border: none;
+    border-radius: 8px 0 0 8px;
+}
+
+.submit {
+    border: none;
+    border-radius: 0 8px 8px 0;
+    transition: all 0.2s ease-in-out;
+    background-color: #1CB5E0;
+}
+
+.submit:hover {
+    background-color: #242c70;
+    cursor: pointer;
+}

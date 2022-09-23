@@ -5,7 +5,7 @@ import { brainai } from '../../assets'
 
 const Logo = () => {
   return (
-    <div className='ma4 mt0'>
+    <div className='ma4 flex justify-center'>
       <Tilt className='logotilt'>
         <div className='w-100 flex justify-center'>
           <img className='brainlogo w-75' src={brainai} alt='SmartBrain' />

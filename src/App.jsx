@@ -1,11 +1,11 @@
-import { Navigation, Logo, ImageLinkForm, FaceRecog } from './Components'
+import { Navigation, ImageLinkForm, FaceRecog, Rank } from './Components'
 import './App.css'
 
 function App() {
   return (
     <div className="App">
       <Navigation />
-      <Logo />
+      <Rank />
       <ImageLinkForm />
       <FaceRecog />
     </div>
