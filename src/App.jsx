@@ -61,6 +61,7 @@ class App extends Component {
 
 
   render() {
+  const {imageUrl, box } = this.state
    return (
     <div className="App">
       <ParticlesBg className="particles" color="#1DB4E0" type="cobweb" bg={true}/>
@@ -70,7 +71,7 @@ class App extends Component {
         onInputChange={this.onInputChange}
         onButtonSubmit={this.onButtonSubmit}
         />
-      <FaceRecog box={this.state.box} imageUrl={this.state.imageURL} />
+      <FaceRecog box={box} imageUrl={imageUrl} />
     </div>
     )
   }
