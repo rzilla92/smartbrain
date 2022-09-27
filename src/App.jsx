@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import Clarifai from 'clarifai';
-import { Navigation, ImageLinkForm, FaceRecog, Rank } from './Components'
+import { Navigation, ImageLinkForm, FaceRecog, Rank, Signin, Register } from './Components'
 import './App.css'
 import ParticlesBg from 'particles-bg'
 
 const app = new Clarifai.App({
-  apiKey: ''
+  apiKey: '78e17b3477a54fbc8d26aa5f7bed91d0'
  });
 
 class App extends Component {
@@ -58,20 +58,36 @@ class App extends Component {
     .catch(err => console.log(err))
   }
 
-
+  onRouteChange = (route) => {
+    if (route=== 'signout') {
+      this.setState({isSignedIn: false})
+    } else if (route==='home') {
+      this.setState({isSignedIn: true})
+    }
+    this.setState({route: route})
+  }
 
   render() {
-  const {imageUrl, box } = this.state
+  const {imageUrl, box , route, isSignedIn} = this.state
    return (
     <div className="App">
       <ParticlesBg className="particles" color="#1DB4E0" type="cobweb" bg={true}/>
-      <Navigation />
-      <Rank />
-      <ImageLinkForm
-        onInputChange={this.onInputChange}
-        onButtonSubmit={this.onButtonSubmit}
-        />
-      <FaceRecog box={box} imageUrl={imageUrl} />
+      <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}/>
+      {route === 'home'
+      ? <div>
+          <Rank />
+          <ImageLinkForm
+            onInputChange={this.onInputChange}
+            onButtonSubmit={this.onButtonSubmit}
+            />
+          <FaceRecog box={box} imageUrl={imageUrl} />
+        </div>
+      : (
+        route === 'signin'
+        ? <Signin onRouteChange={this.onRouteChange} />
+        : <Register onRouteChange={this.onRouteChange} />
+      )
+      }
     </div>
     )
   }

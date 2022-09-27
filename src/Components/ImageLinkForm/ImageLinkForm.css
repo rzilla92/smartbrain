@@ -5,7 +5,7 @@
 .form {
     width: 700px;
     border-style: none;
-    background: linear-gradient(to right, #1CB5E0 0%, #3c49b8 100%);
+    background: linear-gradient(to right, rgba(28,181,224,50%) 0%, rgba(60, 73, 184,75%) 100%);
 }
 
 .form-input {
