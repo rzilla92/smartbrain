@@ -15,7 +15,7 @@ const Navigation = ({onRouteChange , isSignedIn}) => {
         <Logo />
         <div className='flex flex-row items-end'>
         <p onClick={() => onRouteChange('register')} className='f3 ma4 link dim white underline pa3 pointer'>Register</p>
-        <p onClick={() => onRouteChange('singin')} className='f3 ma4 link dim white underline pa3 pointer'>Sign In</p>
+        <p onClick={() => onRouteChange('signin')} className='f3 ma4 link dim white underline pa3 pointer'>Sign In</p>
         </div>
         
       </nav>
