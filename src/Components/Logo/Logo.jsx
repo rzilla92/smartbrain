@@ -7,7 +7,7 @@ const Logo = () => {
   return (
     <div className='ma4 flex items-center'>
       <Tilt className='logotilt'>
-        <div className='w-100 flex justify-center items-center'>
+        <div className='w-100 flex items-center'>
           <img className='brainlogo w-75' src={brainai} alt='SmartBrain' />
           <h1 className='ml2 white title'>SmartBrain</h1>
         </div>
